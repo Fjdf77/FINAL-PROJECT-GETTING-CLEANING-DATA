@@ -9,7 +9,7 @@ if (!file.exists('./UCI HAR Dataset.zip')){
   unzip("UCI HAR Dataset.zip", exdir = getwd())
 }
 
-# First data is read each file individually and it get's converted into a main data frame
+# First data is read each file individually and it get's converted into two sets (train and test):
 features <- read.csv('./UCI HAR Dataset/features.txt', header = FALSE, sep = ' ')
 features <- as.character(features[,2])
 
